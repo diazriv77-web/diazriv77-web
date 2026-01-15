@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Identidad Visual | InnovaTrazos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="identidad.css">
+  <link rel="stylesheet" href="carousel.css">    <!-- estilos comunes de carrusel -->
+  <link rel="stylesheet" href="editorial.css">   <!-- estilos específicos de la página -->
+ <link rel="stylesheet" href="video.css">   <!-- estilos específicos de la página -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+ <!-- Menú principal con logo y submenú funcional -->
+<header class="header">
+   <div class="logo">
+    <a href="index.html">
+      <img src="imagenes/Innovatrazos2.png" alt="Logo InnovaTrazos">
+    </a>
+  </div>
+  <nav class="nav-index">
+    <ul class="nav-list">
+      <li><a href="sobre-mi.html">SOBRE MÍ</a></li>
+      <li class="submenu">
+        <a href="#">SERVICIOS</a>
+        <ul class="dropdown">
+          <li><a href="identidad.html">Identidad</a></li>
+          <li><a href="editorial.html">Editorial</a></li>
+          <li><a href="ilustracion.html">Ilustración</a></li>
+          <li><a href="#">Video</a></li>
+        </ul>
+      </li>
+      <li><a href="#" id="menu-contacto">CONTACTO</a></li>
+    </ul>
+  </nav>
+
+<!-- Modal de contacto -->
+
+  <div id="modal-contacto" class="modal">
+    <div class="modal-contenido">
+      <!--<a href="#" class="cerrar">&times;</a>-->
+      <span class="cerrar-modal">&times;</span>
+      <h2>¡Cuéntanos de tu proyecto!</h2>
+      <p class="intro">Completa el formulario y nos pondremos en contacto contigo.</p>
+      
+      <form action="mailto:tuemail@ejemplo.com" method="post" enctype="text/plain">
+        <label for="nombre">Nombre completo</label>
+        <input type="text" id="nombre" name="Nombre" placeholder="Escribe tu nombre" required>
+
+        <label for="whatsapp">WhatsApp</label>
+        <input type="text" id="whatsapp" name="WhatsApp" placeholder="+57 Número de WhatsApp" required>
+
+        <label for="mensaje">¡Cuéntame brevemente lo que necesitas!</label>
+        <textarea id="mensaje" name="Mensaje" placeholder="Logo, branding, contenido, ilustración, etc." required></textarea>
+
+        <button type="submit" class="btn-enviar">Enviar Información</button>
+      </form>
+
+    </div>
+  </div>
+</header>
+
+  <!-- Encabezado principal -->
+  <section class="identidad-header">
+    <h1>IDENTIDAD VISUAL</h1>
+    <p>Diseñamos marcas que hablan, conectan y transforman. <br> 
+      Cada proyecto refleja la unión entre creatividad, estrategia y emoción visual.</p>
+     
+  </section>
+
+  <!-- Sección Marca con carrusel usando solo html y css-->
+  <section class="identidad-marca bloque-marca">
+    <h2>Marca</h2>
+   <div class="carousel">
+    <div class="carousel-track">
+      <div class="slide">
+        <img src="/imagenes/carrusel/ident arts delish.jpg" alt="Identidad">
+        <h3>Art’s Delish</h3>
+        <p>Art’s Delish: creatividad y sabor en un imagotipo dulce y memorable,<br> 
+          reflejando la esencia de su repostería artesanal y personalizada.</p>
+      </div>
+      <div class="slide">
+        <img src="/imagenes/carrusel/ident amifur.jpg" alt="Identidad">
+        <h3>AMIFUR</h3>
+        <p> Rediseño de logo con un imagotipo que refleja unión y fortaleza, fortaleciendo la identidad <br> 
+          de la asociación de miembros de la fuerza pública en retiro y promoviendo la solidaridad.</p>
+      </div>
+      <div class="slide">I
+        <img src="/imagenes/carrusel/ident lumyn.png" alt="Identidad">
+        <h3>Lumyn Digital</h3>
+        <p>Logo diseñado para Lumyn Digital, agencia de marketing digital. <br>
+          El concepto fusiona la inicial 'L' con un circuito impreso (PCB) y colores <br> 
+          neón vibrantes para comunicar innovación, estrategia y conexión futurista. <br> 
+          El diseño fue creado para reflejar que la marca opera en la vanguardia tecnológica del mercado digital.</p>
+      </div>
+
+      <!-- agrega 3 slides más -->
+
+      <div class="slide">
+        <img src="/imagenes/carrusel/ident sunlogic.png" alt="Identidad">
+        <h3> Sunlogic</h3>
+        <p>Diseño de logotipo para Sunlogic, una empresa especializada en la venta y reparación <br>
+           de productos informáticos. El símbolo se basa en el ícono universal de encendido (Power), <br> 
+           que representa la solución (encender/resolver problemas) y la energía de la tecnología. <br> 
+           La tipografía robusta y el color azul vibrante comunican confianza, profesionalismo y soporte técnico.</p>
+      </div>
+
+ <div class="slide">
+        <img src="/imagenes/carrusel/Editorial/dr helpoos .png" alt="Identidad">
+        <h3> Odontología Integral</h3>
+        <p>Cliente: Personal, Creé un imagotipo moderno para un profesional de odontología, <br> 
+          que transmite confianza y profesionalismo, reforzando la credibilidad y cercanía <br>
+          del consultorio con sus pacientes.</p>
+      </div>
+
+       <div class="slide">s
+        <img src="/imagenes/carrusel/innovatrazos.png" alt="identidad">
+        <h3> Innovatrazos</h3>
+        <p>Creé la identidad de mi propia marca. Imagotipo que refleja adaptabilidad y conexión. <br>
+           una marca cercana y transformadora.</p>
+      </div>
+
+    </div>
+    <!-- Botones de navegación -->
+    <button class="carousel-btn prev" data-target="carousel-marca">&#10094;</button>
+    <button class="carousel-btn next" data-target="carousel-marca">&#10095;</button>
+  </div>
+</section>
+
+
+  <!-- Sección Piezas gráficas carrusel solo usando html y css-->
+  <section class="identidad-piezas bloque-piezas">
+    <h2>Piezas gráficas</h2>
+    <div class="carousel">
+    <div class="carousel-track">
+      <div class="slide">
+        <img src="/imagenes/carrusel/Pf_afiche.png" alt="El Nuevo Liberal Afiche">
+        <h3>Afiche</h3>
+        <p> Cliente: El Nuevo Liberal, Afiche de expectativa para el Liberal que genera intriga e interés en el evento
+            de destino gastronómico, combinando un estilo llamativo con un mensaje que invita a descubrir la experiencia.</p>
+      </div>
+      <div class="slide">
+        <img src="/imagenes/carrusel/Pf_valla.png" alt="AMIFUR Billboard">
+        <h3>Valla</h3>
+        <p> Cliente: AMIFUR, Diseñé una valla para AMIFUR que refleja unión, solidaridad y compromiso, <br> 
+          transmitiendo  mensaje claro y cercano para conectar con su comunidad.</p>
+      </div>
+      <div class="slide">
+        <img src="/imagenes/carrusel/Pf_volante.png" alt="El Nuevo Liberal Volante">
+        <h3>Volante</h3>
+        <p>Cliente: El Nuevo Liberal, Se diseño un volante atractivo y bien estructurado, pensado para comunicar el mensaje <br>
+          de forma clara, captar la atención y reflejar la esencia de la marca.</p>
+      </div>
+
+      <!-- agrega 3 slides más -->
+
+      <div class="slide">
+        <img src="/imagenes/carrusel/PF_varios.png" alt="Mockups">
+        <h3>Mockups</h3>
+        <p>Realizo mockups que permiten presentar proyectos de forma realista y atractiva, resaltando detalles y proyectando <br>la marca en distintos formatos.</p>
+      </div>
+
+      <div class="slide">
+        <img src="/imagenes/carrusel/PF_carnets.png" alt="Mockups de Carnets">
+        <h3>Carnets</h3>
+        <p> Cliente: Indeportes, Diseñé un carné institucional para Indeportes, pensado para ser funcional, <br>
+            claro y representativo. El diseño refleja la identidad de la entidad y garantiza una presentación <br> 
+            profesional de sus miembros. Resultado: una pieza visual práctica y coherente con la imagen institucional.</p>
+      </div>
+
+    </div>
+    <!-- Botones de navegación -->
+    <button class="carousel-btn prev" data-target="carousel-piezas">&#10094;</button>
+    <button class="carousel-btn next" data-target="carousel-piezas">&#10095;</button>
+  </div>
+</section>
+
+<!-- Botón para regresar al inicio -->
+ <footer class="footer-identidad">
+    <a href="index.html" class="btn-inicio">← Regresar al inicio</a>
+ </footer>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const contactoLink = document.getElementById("menu-contacto");
+  const modal = document.getElementById("modal-contacto");
+  const cerrar = document.querySelector(".cerrar-modal");
+
+  // Abrir modal
+  contactoLink.addEventListener("click", function (e) {
+    e.preventDefault();
+    modal.style.display = "block";
+  });
+
+  // Cerrar modal con la X
+  cerrar.addEventListener("click", function () {
+    modal.style.display = "none";
+  });
+
+  // Cerrar modal haciendo clic fuera
+  window.addEventListener("click", function (e) {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+});
+</script>
+
+<script src="/menu.js"></script>
+
+<script src="/carousel.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,284 @@
+/* ==========================
+   IDENTIDAD VISUAL - ESTILOS
+   ========================== */
+
+/* Encabezado principal */
+.identidad-header {
+  background-color: #304D6D;
+  color: #ffffff;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.identidad-header h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.identidad-header p {
+  font-size: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Botón regresar al inicio */
+.btn-inicio {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #304D6D;
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-inicio:hover {
+  background-color: #6495DD;
+  color: #333;
+  transform: translateY(-2px);
+}
+
+/* Secciones de contenido */
+.identidad-marca,
+.identidad-piezas {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.identidad-marca h2,
+.identidad-piezas h2 {
+  font-size: 36px;
+  color: #304D6D;
+  margin-bottom: 40px;
+}
+
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .identidad-header h1 {
+    font-size: 32px;
+  }
+
+  .identidad-header p {
+    font-size: 18px;
+  }
+
+  .identidad-marca h2,
+  .identidad-piezas h2 {
+    font-size: 28px;
+  }
+
+  .tarjeta {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+
+
+.nav label {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: #ccc;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.nav label:hover {
+  background: #304D6D;
+}
+
+/* Carrusel base */
+.carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+ 
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 20px;
+  border:5px solid #304D6D;
+}
+
+.slide img {
+  max-width: 100%;     /* ocupa el ancho disponible */
+  height: auto;        /* mantiene proporción original */
+  display: block;
+  margin: 0 auto;      /* centra la imagen */
+  border-radius: 8px;
+  background-color: #f5f5f5; /* fondo neutro para espacios vacíos */
+  padding: 10px;       /* opcional, da aire alrededor */
+}
+
+.slide h3 {
+  font-size: 20px;
+  color: #304D6D;
+  margin-bottom: 10px;
+}
+
+.slide p {
+  font-size: 16px;
+  color: #333;
+}
+
+/* Botones de navegación */
+.carousel-btn {
+  position: absolute;
+ 
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(48,77,109,0.8);
+  color: #fff;
+  border: none;
+  font-size: 24px;
+  padding: 10px 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  opacity: 0.7;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-btn:hover {
+  background-color: #6495DD;
+  color: #333;
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+/* Bloques de color */
+.bloque-marca {
+  background-color: #D5E2F9;
+  padding: 60px 20px;
+  color: #fff; /* texto en blanco para contraste */
+}
+
+.bloque-piezas {
+  background-color: #304D6D;
+  padding: 60px 20px;
+  color: #fff;
+}
+
+/* Títulos dentro de bloques */
+.bloque-marca h2,
+.bloque-piezas h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* Carrusel dentro de bloques */
+.bloque-marca .carousel,
+.bloque-piezas .carousel {
+  background: transparent; /* el fondo lo da el bloque */
+}
+
+/* Bloque Marca (fondo #D5E2F9) → texto blanco */
+.bloque-marca {
+  background-color: #D5E2F9;
+  padding: 60px 20px;
+  color: #f1f1f1;
+}
+
+.bloque-marca h2,
+.bloque-marca .slide h3,
+.bloque-marca .slide p {
+  color: #304D6D; /* azul para títulos */
+}
+
+.bloque-MARCA .slide p {
+  color: #262626; /* blanco para párrafos */
+   border:5px solid #ffffff;
+}
+
+
+/* Bloque Piezas (fondo #304D6D) → texto claro diferenciado */
+.bloque-piezas {
+  background-color: #304D6D;
+  padding: 60px 20px;
+  color: #f1f1f1;
+}
+
+.bloque-piezas h2,
+.bloque-piezas .slide h3 {
+  color: #D5E2F9; /* azul claro para títulos */
+}
+
+.bloque-piezas .slide p {
+  color: #ffffff; /* blanco para párrafos */
+}
+
+/*Estilos para el boton regreso al inicio en la pg sobre-mi*/
+
+.footer-identidad {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f5f5f5; /* fondo neutro, puedes cambiarlo */
+}
+
+
+/* Modal base */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.modal {
+  display: none; /* oculto por defecto */
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.modal-contenido {
+  background-color: #fff;
+  margin: 60px auto;
+  padding: 40px;
+  border-radius: 12px;
+  max-width: 700px;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  position: relative;
+}
+
+.cerrar-modal {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #304D6D;
+  cursor: pointer;
+}

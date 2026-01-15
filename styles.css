@@ -1,0 +1,803 @@
+/* ==========================
+   TIPOGRAFÍA Y BASE GLOBAL
+   ========================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-color: #fff;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+  margin: 0;
+}
+
+p {
+  font-weight: 400;
+  line-height: 1.6;
+  margin: 0 0 20px 0;
+}
+
+/* ==========================
+   HEADER INDEX
+   ========================== */
+.header {
+  background-color: #D5E2F9;
+  height: 147px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  position: relative;   /* clave */
+  z-index: 1000;        /* clave */
+
+}
+
+/*Logo en el menú */
+.logo img {
+  height: 100px;
+  display: block;
+}
+
+/* Submenú funcional */
+.submenu {
+  position: relative;
+}
+
+
+/* Menú index */
+.nav-index .nav-list {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-index .nav-list li {
+  position: relative;
+}
+
+.nav-index .nav-list a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #304D6D;
+  transition: color 0.3s, background-color 0.3s;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.nav-index .nav-list a:hover {
+  color: #333;
+  background-color: #6495DD;
+}
+
+/* Submenú index funcional */
+.nav-index .dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  border-radius: 5px;
+
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 2000; /* asegura que quede por encima del video */
+}
+
+.submenu:hover .dropdown {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.dropdown li a {
+  display: block;
+  padding: 8px 20px;
+  color: #304D6D;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown li a:hover {
+  background-color: #6495DD;
+  color: #333;
+  background-image: url('path/to/your/image.png');
+}
+
+/* Opción desactivada */
+/* .nav-list a.inactive,
+.dropdown li a.inactive {
+  color: #999;
+  pointer-events: none;
+  cursor: default;
+  background-color: transparent;
+} */
+
+.nav-list a.active,
+.dropdown a.active {
+  color: #6495DD;        /* dorado para destacar */
+  font-weight: 600;      /* más grueso */
+  text-decoration: underline; /* subrayado opcional */
+}
+
+
+
+.nav-index .submenu:hover .dropdown {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.nav-index .dropdown li a {
+  color: #304D6D;
+  font-weight: 400;
+  padding: 8px 20px;
+  display: block;
+}
+
+.nav-index .dropdown li a:hover {
+  background-color: #6495DD;
+  color: #333;
+}
+
+/* ==========================
+   HEADER RESTO DE PÁGINAS
+   ========================== */
+.menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 0;
+  padding: 20px 0;
+  background-color: #304D6D;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s, background-color 0.3s;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.menu li a:hover {
+  color: #333;
+  background-color: #6495DD;
+}
+
+/* ==========================
+   SECCIÓN SOBRE MÍ
+   ========================== */
+.sobre-mi {
+  text-align: center;
+  margin: 50px auto;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.sobre-mi h1 {
+  font-weight: 600;
+  font-size: 40px;
+  color: #304D6D;
+  margin-bottom: 20px;
+}
+
+.sobre-mi p {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.subtitulo {
+  font-weight: 600;
+  font-size: 36px;
+  color: #304D6D;
+  margin: 40px 0 20px 0;
+}
+
+.imagen-perfil {
+  display: block;
+  margin: 20px auto;
+  max-width: 1920px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* ==========================
+   EXPERIENCIA LABORAL
+   ========================== */
+.experiencia {
+  background-color: #304D6D;
+  color: white;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.experiencia h2 {
+  font-weight: 600;
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #ffffff;
+}
+
+.tarjetas {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.tarjeta {
+  background-color: white;
+  color: #333;
+  border-radius: 10px;
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+.tarjeta img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.tarjeta:hover img {
+  transform: scale(1.1);
+}
+
+.tarjeta h3 {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #304D6D;
+}
+
+.tarjeta p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+/* ==========================
+   HABILIDADES Y PROGRAMAS
+   ========================== */
+.habilidades {
+  background-color: #D5E2F9;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.habilidades h2 {
+  font-weight: 600;
+  font-size: 36px;
+  color: #304D6D;
+  margin-bottom: 20px;
+}
+
+.habilidades p {
+  font-weight: 400;
+  font-size: 24px;
+  color: #000000;
+  margin-bottom: 40px;
+}
+
+.iconos-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.icono img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+}
+
+.icono img:hover {
+  transform: scale(1.1);
+}
+
+.nav-index .dropdown li a {
+  color: #304D6D;
+  font-weight: 400;
+  padding: 8px 20px;
+  display: block;
+}
+
+.nav-index .dropdown li a:hover {
+  background-color: #6495DD;
+  color: #333;
+}
+
+/* ==========================
+   HERO VIDEO (centrado, no loop en HTML)
+   ========================== */
+.hero-video {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* ocupa toda la pantalla */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  z-index: 1; /* el video queda detrás */
+}
+
+.hero-bg {
+  max-width: 120%;
+  max-height: 120%;
+  object-fit: cover; /* mantiene proporción sin deformar */
+  /*display: block;*/
+  margin: 0 auto;
+}
+
+.hero-overlay {
+  background-image: url("/imagenes/fondo\ azul.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%; height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  /*position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(240, 17, 17, 0.3); /* contraste suave */
+}
+
+/* ==========================
+   CTA BLOCK (texto + botón con volumen)
+   ========================== */
+.cta-block {
+  background-color: #304D6D;
+  height: 188px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cta-content {
+  width: 90%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cta-text p {
+  font-weight: 500; /* Poppins Medium */
+  font-size: 22px;
+  color: #ffffff;
+  text-align: left;
+  margin: 0;
+}
+
+.texto-boton {
+  font-size: 18px;
+  color: #ffffff;
+  margin: 0 0 8px 0;
+  text-align: center;
+}
+
+.btn-proyecto {
+  display: inline-block;
+  background-color: #dcdcdc; /* gris claro */
+  color: #333;
+  padding: 12px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3); /* sombra para volumen */
+  transition: transform 0.2s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-proyecto:hover {
+  background-color: #6495DD;
+  color: #304D6D;
+  transform: translateY(-2px); /* efecto de levantarse */
+  box-shadow: 0 6px 10px rgba(0,0,0,0.4);
+}
+
+/* ==========================
+   MODAL (emergente en la misma página)
+   ========================== */
+.modal {
+  display: none; /* oculto por defecto */
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  z-index: 9999;
+}
+
+.modal:target {
+  display: flex; /* se muestra al hacer clic */
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-contenido {
+  background: #ffffff;
+  width: 90%;
+  max-width: 600px;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+  position: relative;
+  text-align: left;
+}
+
+.cerrar {
+  position: absolute;
+  top: 15px; right: 20px;
+  text-decoration: none;
+  font-size: 28px;
+  color: #333;
+}
+
+.modal-contenido h2 {
+  font-size: 28px;
+  color: #304D6D;
+  margin-bottom: 10px;
+}
+
+.modal-contenido p.intro {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.modal-contenido form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: 600;
+  color: #304D6D;
+}
+
+.modal-contenido form input,
+.modal-contenido form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.btn-enviar {
+  margin-top: 15px;
+  padding: 12px 25px;
+  background-color: #304D6D;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-enviar:hover {
+  background-color: #6495DD;
+  color: #333;
+}
+
+/* ===== CONTACT BLOCK ===== */
+.contact-block {
+  background-color: #D5E2F9;
+  height: 202px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-content {
+  width: 90%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between; /* izquierda y derecha */
+  align-items: flex-start;
+}
+
+/* Columna izquierda */
+.contact-left {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.icon-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  color: #304D6D;
+}
+
+.icon-box i {
+  font-size: 24px;
+  color: #304D6D;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.icon-box i:hover {
+  transform: scale(1.2);
+  color: #6495DD;
+}
+
+/* Columna derecha */
+.contact-right {
+  text-align: right;
+}
+
+.siguenos {
+  font-size: 18px;
+  font-weight: 600;
+  color: #304D6D;
+  margin-bottom: 8px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-end;
+}
+
+.social-icons a {
+  text-decoration: none;
+}
+
+.social-icons a i {
+  font-size: 24px;
+  color: #304D6D;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a i:hover {
+  transform: scale(1.2);
+  color: #6495DD;
+}
+
+/* ==========================
+   RESPONSIVO
+   ========================== */
+@media (max-width: 992px) {
+  .cta-text p {
+    font-size: 28px;
+  }
+  .contact-logo img {
+    height: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 0 20px;
+  }
+  .nav-index .nav-list {
+    gap: 16px;
+  }
+  .cta-content {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .cta-block {
+    height: auto;
+    padding: 24px 0;
+  }
+  .contact-content {
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+  }
+  .contact-block {
+    height: auto;
+    padding: 20px 0;
+  }
+  .contact-icons {
+    align-items: center;
+  }
+  .social-block {
+    text-align: center;
+  }
+}
+
+/*Estilos para el boton regreso al inicio en la pg sobre-mi*/
+
+.footer-sobre-mi {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f5f5f5; /* fondo neutro, puedes cambiarlo */
+}
+
+/*Estilos para el boton regreso al inicio en la pg Ilustracion*/
+
+.footer-ilustracion {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f5f5f5; /* fondo neutro, puedes cambiarlo */
+}
+
+.btn-inicio {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #304D6D; /* azul corporativo */
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-inicio:hover {
+  background-color: #D5E2F9; /* azul claro al pasar el cursor */
+  color: #333;
+  transform: translateY(-2px);
+}
+
+/* Modal base */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.modal {
+  display: none; /* oculto por defecto */
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.modal-contenido {
+  background-color: #fff;
+  margin: 60px auto;
+  padding: 40px;
+  border-radius: 12px;
+  max-width: 700px;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  position: relative;
+}
+
+.cerrar-modal {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #304D6D;
+  cursor: pointer;
+}
+
+/* --- Video del perfil profesional (responsive) --- */
+
+.video-perfil {
+    width: 100%;
+    max-width: 650px;     /* similar al tamaño de tu imagen original */
+    margin: 25px auto;
+    border-radius: 16px;  /* estilo suave y moderno alineado a InnovaTrazos */
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+/* El video dentro */
+.video-perfil video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: none;
+    outline: none;
+    object-fit: cover; /* asegura estética limpia */
+}
+
+/* Contenedor del hero */
+.hero-video {
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+    overflow: hidden;
+}
+
+.hero-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Capa para oscurecer un poco si quieres texto encima */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2); /* opcional */
+}
+
+/* Botón para activar sonido */
+.sonido-btn {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  padding: 12px 18px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.85);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.sonido-btn:hover {
+  background: white;
+}
+
+/* Botón de reproducción */
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 25px 30px;
+    font-size: 40px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.play-button:hover {
+    background: rgba(0, 0, 0, 0.9);
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.play-button:active {
+    transform: translate(-50%, -50%) scale(0.95);
+}

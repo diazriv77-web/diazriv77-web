@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InnovaTrazos</title>
+  <!-- Tipografía -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="emergente.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="identidad.css">
+   <link rel="stylesheet" href="video.css">   <!-- estilos específicos de la página -->
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">
+      <img src="/imagenes/Innovatrazos2.png" alt="Logo InnovaTrazos">
+    </div>
+    <nav class="nav-index">
+      <ul class="nav-list">
+        <li><a href="sobre-mi.html">SOBRE MÍ</a></li>
+        <li class="submenu">
+          <a href="#">SERVICIOS</a>
+          <ul class="dropdown">
+            <li><a href="/identidad.html">Identidad</a></li>
+            <li><a href="/editorial.html">Editorial</a></li>
+            <li><a href="/ilustracion.html">Ilustración</a></li>
+            <li><a href="/video.html">Video</a></li>
+          </ul>
+        </li>
+        <li><a href="index.html#contacto" id="menu-contacto">CONTACTO</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  
+ <!-- Hero con video -->
+  <section class="hero-video">
+    <video id="videoHero" class="hero-bg" autoplay playsinline>
+        <source src="/videos/Creación_de_Video_Introductorio_Innovador.mp4" type="video/mp4">
+        Tu navegador no soporta video.
+    </video>
+
+    <button id="sonidoBtn" class="sonido-btn">🔊 Activar sonido</button>
+
+    <!-- Botón de reproducción -->
+    <button id="btnReproducir" class="play-button">
+        ▶
+    </button>
+</section>
+
+
+
+
+  <!-- Bloque CTA -->
+  <section class="cta-block">
+    <div class="cta-content">
+      <div class="cta-text">
+        <p>Cada proyecto es una oportunidad</p>
+        <p>para crear algo único y con sentido.</p>
+      </div>
+      <div class="cta-button">
+        <p class="texto-boton">Si buscas diseño con alma</p>
+        <a href="#modal" class="btn-proyecto">¡Háblanos de tu proyecto!</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal emergente -->
+  <div id="modal" class="modal">
+    <div class="modal-contenido">
+      <a href="#" class="cerrar">&times;</a>
+      <h2>¡Cuéntanos de tu proyecto!</h2>
+      <p class="intro">Completa el formulario y nos pondremos en contacto contigo.</p>
+      <form action="mailto:tuemail@ejemplo.com" method="post" enctype="text/plain">
+        <label for="nombre">Nombre completo</label>
+        <input type="text" id="nombre" name="Nombre" placeholder="Escribe tu nombre" required>
+
+        <label for="whatsapp">WhatsApp</label>
+        <input type="text" id="whatsapp" name="WhatsApp" placeholder="+57 Número de WhatsApp" required>
+
+        <label for="mensaje">¡Cuéntame brevemente lo que necesitas!</label>
+        <textarea id="mensaje" name="Mensaje" placeholder="Logo, branding, contenido, ilustración, etc." required></textarea>
+
+        <button type="submit" class="btn-enviar">Enviar Información</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Bloque de contacto -->
+<section class="contact-block">
+  <div class="contact-content">
+    <!-- Columna izquierda: datos de contacto -->
+    <div class="contact-left">
+      <div class="icon-box">
+        <i class="fa-solid fa-envelope"></i>
+        <span>diazriv770@gmail.com</span>
+      </div>
+      <div class="icon-box">
+        <i class="fa-solid fa-location-dot"></i>
+        <span>Cra 5 No. 52N-15</span>
+      </div>
+      <div class="icon-box">
+        <i class="fa-solid fa-phone"></i>
+        <span>057 - 313 700 8387</span>
+      </div>
+    </div>
+
+    <!-- Columna derecha: redes sociales -->
+    <div class="contact-right">
+      <p class="siguenos">Síguenos</p>
+      <div class="social-icons">
+        <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<script src="menu.js"></script>
+<script src="/carousel.js"></script>
+
+<!-- Modal de contacto -->
+
+  <div id="modal-contacto" class="modal">
+    <div class="modal-contenido">
+      <!--<a href="#" class="cerrar">&times;</a>-->
+      <span class="cerrar-modal">&times;</span>
+      <h2>¡Cuéntanos de tu proyecto!</h2>
+      <p class="intro">Completa el formulario y nos pondremos en contacto contigo.</p>
+      
+      <form action="mailto:tuemail@ejemplo.com" method="post" enctype="text/plain">
+        <label for="nombre">Nombre completo</label>
+        <input type="text" id="nombre" name="Nombre" placeholder="Escribe tu nombre" required>
+
+        <label for="whatsapp">WhatsApp</label>
+        <input type="text" id="whatsapp" name="WhatsApp" placeholder="+57 Número de WhatsApp" required>
+
+        <label for="mensaje">¡Cuéntame brevemente lo que necesitas!</label>
+        <textarea id="mensaje" name="Mensaje" placeholder="Logo, branding, contenido, ilustración, etc." required></textarea>
+
+        <button type="submit" class="btn-enviar">Enviar Información</button>
+      </form>
+
+    </div>
+  </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const contactoLink = document.getElementById("menu-contacto");
+  const modal = document.getElementById("modal-contacto");
+  const cerrar = document.querySelector(".cerrar-modal");
+
+  // Abrir modal
+  contactoLink.addEventListener("click", function (e) {
+    e.preventDefault();
+    modal.style.display = "block";
+  });
+
+  // Cerrar modal con la X
+  cerrar.addEventListener("click", function () {
+    modal.style.display = "none";
+  });
+
+  // Cerrar modal haciendo clic fuera
+  window.addEventListener("click", function (e) {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+});
+</script>
+<script src="/menu.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const video = document.getElementById("videoHero");
+  const btn = document.getElementById("sonidoBtn");
+
+  // 🔇 Forzar inicio en silencio (autoplay permitido)
+  video.muted = true;
+  video.play();
+
+  btn.addEventListener("click", () => {
+    video.muted = false;     // 🔊 Activar sonido
+    video.play();            // ▶ Reproducir otra vez con sonido
+    btn.style.display = "none"; // Ocultar botón
+  });
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const video = document.getElementById("videoHero");
+    const boton = document.getElementById("btnReproducir");
+
+    // Asegura que el video NO esté muteado si tiene audio
+    video.muted = false;
+
+    boton.addEventListener("click", () => {
+        video.play();         // ▶ Reproduce el video
+        boton.style.display = "none"; // Ocultar botón al reproducir
+    });
+});
+</script>
+
+
+</body>
+</html>

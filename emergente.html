@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InnovaTrazos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/emergente.css" />
+</head>
+<body>
+
+  <!-- Botón que abre el modal -->
+  <!--<a href="#modal" class="btn-abrir">¡Hablemos de tu proyecto!</a> -->
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-contenido">
+      <a href="#" class="cerrar">&times;</a>
+
+      <!-- Logo centrado -->
+      <div class="logo-modal">
+        <img src="/imagenes/logo.png" alt="Logo InnovaTrazos" />
+      </div>
+
+      <h2>InnovaTrazos</h2>
+      <p class="intro">Escríbeme sobre tus necesidades de diseño</p>
+
+      <form action="mailto:tuemail@ejemplo.com" method="post" enctype="text/plain">
+        <label for="nombre">Nombre completo</label>
+        <input type="text" id="nombre" name="Nombre" placeholder="Escribe tu nombre" required />
+
+        <label for="whatsapp">WhatsApp</label>
+        <input type="text" id="whatsapp" name="WhatsApp" placeholder="+57 Número de WhatsApp" required />
+
+        <label for="mensaje">¡Cuéntame brevemente lo que necesitas!</label>
+        <textarea id="mensaje" name="Mensaje" placeholder="Logo, branding, contenido, ilustración, etc." required></textarea>
+
+        <button type="submit" class="btn-enviar">Enviar Información</button>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>

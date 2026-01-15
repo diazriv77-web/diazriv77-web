@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Video</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="video.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- Bloque 1: Header con logo y menú -->
+  <header class="header-video">
+    <div class="logo">
+      <a href="index.html">
+        <img src="imagenes/Innovatrazos2.png" alt="Logo InnovaTrazos" />
+      </a>
+    </div>
+    <nav class="nav-index">
+      <ul class="nav-list">
+        <li><a href="sobre-mi.html">SOBRE MÍ</a></li>
+        <li class="submenu">
+          <a href="#">SERVICIOS</a>
+          <ul class="dropdown">
+            <li><a href="identidad.html">Identidad</a></li>
+            <li><a href="editorial.html">Editorial</a></li>
+            <li><a href="ilustracion.html">Ilustración</a></li>
+            <li><a href="video.html">Video</a></li>
+          </ul>
+        </li>
+        <li><a href="#" id="menu-contacto">CONTACTO</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Bloque 2: Encabezado principal -->
+  <section class="encabezado-video">
+    <h2>VIDEO</h2>
+    <p>
+      Contenido en video diseñado para cautivar, conectar y amplificar la esencia de tu marca, <br>
+      reels ágiles hasta videos publicitarios pensados para inspirar y potenciar tu presencia digital.
+    </p>
+  </section>
+
+  <!-- Bloque 3: Primer video -->
+  <section class="bloque-video claro">
+    <h3>Videos publicitarios</h3>
+    <div class="video-player">
+      <video controls>
+        <source src="/videos/Videoliric  Sandra Viviana Rivadeneira Diaz pequeño.mp4" type="video/mp4" />
+        Tu navegador no soporta el video.
+      </video>
+    </div>
+    <p>
+            Diseñé un lyric video animado que mezcla música, movimiento y diseño. A través de vectores ilustrados, efectos fluidos y la letra sincronizada, construí una pieza visual que acompaña la canción y potencia su mensaje de forma moderna y llamativa.
+
+    </p>
+  </section>
+
+  <!-- Bloque 4: Segundo video -->
+  <section class="bloque-video oscuro">
+    <h3>Video institucional</h3>
+    <div class="video-player">
+      <video controls>
+        <source src="/videos/VIDEO ALBERTO ARANGO PARRA.mp4" type="video/mp4" />
+        Tu navegador no soporta el video.
+      </video>
+    </div>
+    <p>
+      Desarrollé un video especial para el instructor Alberto Arango Parra, donde se resalta su amplia trayectoria en la gastronomía. A través de recursos visuales, diseño y narrativa, se presenta su experiencia, sus logros y su impacto en el ámbito culinario.
+    </p>
+  </section>
+
+  <!-- Bloque 5: Botón regresar -->
+  <section class="bloque-regresar">
+    <a href="index.html" class="btn-inicio">← Regresar al inicio</a>
+  </section>
+
+  <!-- Modal de contacto -->
+
+  <div id="modal-contacto" class="modal">
+    <div class="modal-contenido">
+      <!--<a href="#" class="cerrar">&times;</a>-->
+      <span class="cerrar-modal">&times;</span>
+      <h2>¡Cuéntanos de tu proyecto!</h2>
+      <p class="intro">Completa el formulario y nos pondremos en contacto contigo.</p>
+      
+      <form action="mailto:tuemail@ejemplo.com" method="post" enctype="text/plain">
+        <label for="nombre">Nombre completo</label>
+        <input type="text" id="nombre" name="Nombre" placeholder="Escribe tu nombre" required>
+
+        <label for="whatsapp">WhatsApp</label>
+        <input type="text" id="whatsapp" name="WhatsApp" placeholder="+57 Número de WhatsApp" required>
+
+        <label for="mensaje">¡Cuéntame brevemente lo que necesitas!</label>
+        <textarea id="mensaje" name="Mensaje" placeholder="Logo, branding, contenido, ilustración, etc." required></textarea>
+
+        <button type="submit" class="btn-enviar">Enviar Información</button>
+      </form>
+
+    </div>
+  </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const contactoLink = document.getElementById("menu-contacto");
+  const modal = document.getElementById("modal-contacto");
+  const cerrar = document.querySelector(".cerrar-modal");
+
+  // Abrir modal
+  contactoLink.addEventListener("click", function (e) {
+    e.preventDefault();
+    modal.style.display = "block";
+  });
+
+  // Cerrar modal con la X
+  cerrar.addEventListener("click", function () {
+    modal.style.display = "none";
+  });
+
+  // Cerrar modal haciendo clic fuera
+  window.addEventListener("click", function (e) {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+});
+</script>
+
+<script src="/menu.js"></script>
+
+  
+</body>
+</html>

@@ -1,0 +1,138 @@
+:root {
+  --azul-oscuro: #304D6D;
+  --azul-claro: #D5E2F9;
+  --blanco: #FFFFFF;
+  --radio: 12px;
+  --sombra: 0 8px 20px rgba(48, 77, 109, 0.2);
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: var(--blanco);
+  margin: 0;
+  padding: 40px;
+  color: var(--azul-oscuro);
+}
+
+/* Botón principal */
+.btn-abrir {
+  background: var(--azul-oscuro);
+  color: var(--blanco);
+  padding: 12px 20px;
+  border-radius: var(--radio);
+  text-decoration: none;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: var(--sombra);
+}
+
+/* Modal oculto por defecto */
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(48, 77, 109, 0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(4px);
+}
+
+/* Mostrar modal al apuntar al id */
+.modal:target {
+  display: flex;
+}
+
+/* Contenido del modal centrado */
+.modal-contenido {
+  background: var(--azul-claro);
+  width: 320px;
+  padding: 24px;
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  position: relative;
+  font-size: 14px;
+
+  /* Centrado interno */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Logo centrado */
+.logo-modal {
+  margin-bottom: 8px;
+}
+
+.logo-modal img {
+  width: 64px;
+  height: auto;
+  max-height: 48px;
+  object-fit: contain;
+}
+
+.modal-contenido h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  margin: 0 0 6px;
+}
+
+.modal-contenido .intro {
+  margin-bottom: 16px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Formulario */
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form label {
+  align-self: flex-start;
+  margin: 10px 0 4px;
+  font-weight: 600;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid var(--azul-oscuro);
+  border-radius: 8px;
+  font-size: 13px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+form textarea {
+  resize: none;
+  height: 60px;
+}
+
+.btn-enviar {
+  margin-top: 14px;
+  background: var(--azul-oscuro);
+  color: var(--blanco);
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: var(--radio);
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+}
+
+/* Botón cerrar */
+.cerrar {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  font-size: 22px;
+  text-decoration: none;
+  color: var(--azul-oscuro);
+  font-weight: bold;
+}

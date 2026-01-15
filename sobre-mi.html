@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Mí</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Importar tipografía Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Menú adaptado -->
+    <header class="header">
+  <div class="logo">
+    <a href="index.html">
+      <img src="imagenes/Innovatrazos2.png" alt="Logo InnovaTrazos">
+    </a>
+  </div>
+  <nav class="nav-index">
+    <ul class="nav-list">
+      <!-- Desactivar la opción Sobre mí porque estamos en esta página -->
+      <li><a class="inactive">SOBRE MÍ</a></li>
+      <li class="submenu">
+        <a href="#">SERVICIOS</a>
+        <ul class="dropdown">
+          <li><a href="identidad.html">Identidad</a></li>
+          <li><a href="#">Editorial</a></li>
+          <li><a href="#">Ilustración</a></li>
+          <li><a href="#">Video</a></li>
+        </ul>
+      </li>
+      <li><a href="#" id="menu-contacto">CONTACTO</a></li>
+    </ul>
+  </nav>
+
+  <!-- Modal de contacto -->
+
+  <div id="modal-contacto" class="modal">
+    <div class="modal-contenido">
+      <!--<a href="#" class="cerrar">&times;</a>-->
+      <span class="cerrar-modal">&times;</span>
+      <h2>¡Cuéntanos de tu proyecto!</h2>
+      <p class="intro">Completa el formulario y nos pondremos en contacto contigo.</p>
+      
+      <form action="mailto:tuemail@ejemplo.com" method="post" enctype="text/plain">
+        <label for="nombre">Nombre completo</label>
+        <input type="text" id="nombre" name="Nombre" placeholder="Escribe tu nombre" required>
+
+        <label for="whatsapp">WhatsApp</label>
+        <input type="text" id="whatsapp" name="WhatsApp" placeholder="+57 Número de WhatsApp" required>
+
+        <label for="mensaje">¡Cuéntame brevemente lo que necesitas!</label>
+        <textarea id="mensaje" name="Mensaje" placeholder="Logo, branding, contenido, ilustración, etc." required></textarea>
+
+        <button type="submit" class="btn-enviar">Enviar Información</button>
+      </form>
+
+    </div>
+  </div>
+  
+</header>
+
+
+    <!-- Contenido principal -->
+    <section class="sobre-mi">
+        <h1>SOBRE MÍ</h1>
+        <p>
+            Soy la diseñadora detrás de invovatrazos, un espacio donde transformo ideas en experiencias visuales con sentido y claridad. 
+            Disfruto crear piezas que conecten emocionalmente y reflejen la esencia de cada proyecto, siempre desde la sensibilidad, 
+            el compromiso y la atención al detalle.
+        </p>
+
+        <!-- Intertítulo -->
+        <h2 class="subtitulo">Perfil profesional</h2>
+
+       <!-- Video en lugar de imagen -->
+<div class="video-perfil">
+    <video 
+        src="/videos/PROYECTO FINAL SANDRA RIVADENEIRA.mp4" 
+        poster="imagenes/poster-perfil.jpg"
+        controls 
+        playsinline 
+        preload="metadata"
+    ></video>
+</div>
+    </section>
+
+    <!-- Bloque Experiencia Laboral -->
+    <section class="experiencia">
+        <h2>Experiencia Laboral</h2>
+        <div class="tarjetas">
+            <div class="tarjeta">
+                <img src="/imagenes/centro color.jpg" alt="Trabajo 1">
+                <h3>Centro Color 2013-2014</h3>
+                <p>Deseño y producción de carnets, impresión digital <br> y personalización <br> de credenciales.</p>
+            </div>
+            <div class="tarjeta">
+                <img src="/imagenes/j k impresores.jpg" alt="Trabajo 2">
+                <h3>JK Impresiones  2012</h3>
+                <p>Diseño de piezas impresas y material promocional (Volantes, Afiches, Tatjetas. Etc). Apoyo en preprensa y producción para garantizar calidad.</p>
+            </div>
+            <div class="tarjeta">
+                <img src="/imagenes/el liberal.png" alt="Trabajo 3">
+                <h3>El Nuevo Liberal <br> 2013-2023</h3>
+                <p>Diseño y diagramación de periódicos, revistas y material editorial, creación de <br> piezas publicitarias <br> impresas y digitalales.</p>
+            </div>
+        </div>
+    </section>
+
+<!-- Bloque Mis habilidades y programas -->
+<section class="habilidades">
+    <h2>Mis habilidades y programas</h2>
+    <p>Herramientas y tecnología que domino para llevar proyectos a la vida</p>
+
+    <div class="iconos-grid">
+        <div class="icono"><img src="/imagenes/logo ilustra.png" alt="Illustrator"> <p>Illustrator </p></div>
+        <div class="icono"><img src="/imagenes/logo photos.png" alt="Photoshop"><p>Photoshop </p></div>
+        <div class="icono"><img src="/imagenes/logo indesing.png" alt="Indesing"><p>Indesing </p></div>
+        <div class="icono"><img src="/imagenes/logo after.png" alt="AfterEfects"><p>AfterEfects </p></div>
+        <div class="icono"><img src="/imagenes/logo premier.png" alt="Premiere"><p>Premiere </p></div>
+        <div class="icono"><img src="/imagenes/logo krita.png" alt="Krita"><p>Krita </p></div>
+        <div class="icono"><img src="/imagenes/logo blender.png" alt="Blender"><p>Blender </p></div>
+        <div class="icono"><img src="/imagenes/log story.png" alt="Story Board"><p>story Board </p></div>
+    </div>
+</section>
+
+<!--Boton regresar al inicio -->
+
+<footer class="footer-sobre-mi">
+  <a href="index.html" class="btn-inicio">← Regresar al inicio</a>
+</footer>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const contactoLink = document.getElementById("menu-contacto");
+  const modal = document.getElementById("modal-contacto");
+  const cerrar = document.querySelector(".cerrar-modal");
+
+  // Abrir modal
+  contactoLink.addEventListener("click", function (e) {
+    e.preventDefault();
+    modal.style.display = "block";
+  });
+
+  // Cerrar modal con la X
+  cerrar.addEventListener("click", function () {
+    modal.style.display = "none";
+  });
+
+  // Cerrar modal haciendo clic fuera
+  window.addEventListener("click", function (e) {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+});
+</script>
+
+
+<script src="menu.js"></script>
+
+
+
+</body>
+</html>
